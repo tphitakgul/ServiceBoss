@@ -9,9 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //Explicit
+    var nameString:String = "";
+    
+    @IBOutlet weak var myTextField: UITextField!
+    
+    @IBAction func clickAction(_ sender: Any) {
+        nameString = myTextField.text!
+                    //! = forunnap -> not empty
+        //Show Logcat
+        print("name ==>  \(nameString) ");
+        
+    }//clickAction end
+    
 
-    override func viewDidLoad() {
+    override func viewDidLoad() {//frist method start **init**
         super.viewDidLoad()
+        
+        print(" --- init start --- ");
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -21,5 +37,5 @@ class ViewController: UIViewController {
     }
 
 
-}
+} //Main Class
 
